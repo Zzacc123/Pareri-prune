@@ -29,16 +29,22 @@ class ActivationTracker:
         self.hooks: List[torch.utils.hooks.RemovableHandle] = []
 
     def _get_hook(self, layer_name: str):
-        def hook_fn(module: nn.Module, inputs: tuple, output: torch.Tensor | None):
-            data = inputs[0].detach()  # [batch, seq, intermediate]
+        def hook_fn(module: nn.Module, args: tuple):
+            """A hook function that captures the input activations of a module."""
+            # For a pre-hook, the input tensor is the first element of the args tuple.
+            data = args[0].detach()  # Shape: [batch, seq, intermediate_size]
+
+            # Calculate mean absolute activation across batch and sequence dimensions
             mean_act = data.abs().mean(dim=(0, 1)).cpu()
+
+            # Update running mean
             if layer_name not in self.activations:
                 self.activations[layer_name] = mean_act
                 self.counts[layer_name] = 1
             else:
                 n = self.counts[layer_name]
                 self.activations[layer_name] = (self.activations[layer_name] * n + mean_act) / (n + 1)
-                self.counts[layer_name] = n + 1
+                self.counts[layer_name] += 1
         return hook_fn
 
     def register_hooks(self, target_layers: Optional[Iterable[int]] = None) -> None:

@@ -1,0 +1,41 @@
+[2025-11-28 14:05:59,470][evaluator][INFO] - Evaluations stored in the experiment directory: ./saves/eval/RETAIN_EVAL_8B
+[2025-11-28 14:05:59,473][evaluator][INFO] - ***** Running TOFU evaluation suite *****
+[2025-11-28 14:05:59,473][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/RETAIN_EVAL_8B/TOFU_EVAL.json
+[2025-11-28 14:05:59,474][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/RETAIN_EVAL_8B/TOFU_SUMMARY.json
+[2025-11-28 14:06:16,330][metrics][INFO] - Evaluating forget_Q_A_PARA_Prob
+[2025-11-28 14:06:38,880][metrics][INFO] - Evaluating forget_Q_A_PERT_Prob
+[2025-11-28 14:07:18,879][metrics][INFO] - Evaluating forget_truth_ratio
+[2025-11-28 14:07:18,881][metrics][INFO] - Evaluating forget_quality
+[2025-11-28 14:07:18,881][metrics][WARNING] - retain_model_logs not provided in reference_logs, setting forget_quality to None
+[2025-11-28 14:07:18,881][evaluator][INFO] - Result for metric forget_quality:	None
+[2025-11-28 14:07:24,127][metrics][INFO] - Evaluating forget_Q_A_Prob
+[2025-11-28 14:07:32,041][evaluator][INFO] - Result for metric forget_Q_A_Prob:	0.10542778015136718
+[2025-11-28 14:07:33,813][metrics][INFO] - Evaluating forget_Q_A_ROUGE
+[2025-11-28 14:08:00,736][evaluator][INFO] - Result for metric forget_Q_A_ROUGE:	0.39341615184209106
+[2025-11-28 14:08:02,587][metrics][INFO] - Evaluating retain_Q_A_Prob
+[2025-11-28 14:08:11,173][metrics][INFO] - Evaluating retain_Q_A_ROUGE
+[2025-11-28 14:08:35,838][metrics][INFO] - Evaluating retain_Q_A_PARA_Prob
+[2025-11-28 14:08:44,877][metrics][INFO] - Evaluating retain_Q_A_PERT_Prob
+[2025-11-28 14:09:20,931][metrics][INFO] - Evaluating retain_Truth_Ratio
+[2025-11-28 14:09:22,697][metrics][INFO] - Evaluating ra_Q_A_Prob
+[2025-11-28 14:09:24,992][metrics][INFO] - Evaluating ra_Q_A_PERT_Prob
+[2025-11-28 14:09:28,466][metrics][INFO] - Evaluating ra_Q_A_Prob_normalised
+[2025-11-28 14:09:29,823][metrics][INFO] - Evaluating ra_Q_A_ROUGE
+[2025-11-28 14:09:34,674][metrics][INFO] - Skipping ra_Truth_Ratio's precompute ra_Q_A_Prob, already evaluated.
+[2025-11-28 14:09:34,674][metrics][INFO] - Skipping ra_Truth_Ratio's precompute ra_Q_A_PERT_Prob, already evaluated.
+[2025-11-28 14:09:34,674][metrics][INFO] - Evaluating ra_Truth_Ratio
+[2025-11-28 14:09:35,546][metrics][INFO] - Evaluating wf_Q_A_Prob
+[2025-11-28 14:09:38,331][metrics][INFO] - Evaluating wf_Q_A_PERT_Prob
+[2025-11-28 14:09:42,029][metrics][INFO] - Evaluating wf_Q_A_Prob_normalised
+[2025-11-28 14:09:43,154][metrics][INFO] - Evaluating wf_Q_A_ROUGE
+[2025-11-28 14:09:49,110][metrics][INFO] - Skipping wf_Truth_Ratio's precompute wf_Q_A_Prob, already evaluated.
+[2025-11-28 14:09:49,110][metrics][INFO] - Skipping wf_Truth_Ratio's precompute wf_Q_A_PERT_Prob, already evaluated.
+[2025-11-28 14:09:49,110][metrics][INFO] - Evaluating wf_Truth_Ratio
+[2025-11-28 14:09:49,111][metrics][INFO] - Evaluating model_utility
+[2025-11-28 14:09:49,112][evaluator][INFO] - Result for metric model_utility:	0.6469769779655673
+[2025-11-28 14:09:53,431][metrics][INFO] - Evaluating mia_min_k
+[2025-11-28 14:10:06,391][metrics][INFO] - Evaluating privleak
+[2025-11-28 14:10:06,391][metrics][WARNING] - retain_model_logs evals not provided for privleak, using default retain auc of 0.5
+[2025-11-28 14:10:06,391][evaluator][INFO] - Result for metric privleak:	24.000624995199875
+[2025-11-28 14:10:08,224][metrics][INFO] - Evaluating extraction_strength
+[2025-11-28 14:10:15,127][evaluator][INFO] - Result for metric extraction_strength:	0.06528234403621011
